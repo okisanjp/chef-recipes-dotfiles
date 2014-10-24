@@ -7,19 +7,19 @@
 # All rights reserved - Do Not Redistribute
 #
 
-git "/home/okisanjp" do
+git "/home/vagrant" do
   repository "https://github.com/okisanjp/dotfiles.git"
   revision "master"
-  user "okisanjp"
-  group "okisanjp"
+  user "vagrant"
+  group "vagrant"
   action :sync
 end
 
 execute "action" do
   command <<-EOH
-    su - okisanjp
-    cd ~
-    sh ./dotfiles/install.sh
+    su - vagrant
+    cd ~/dotfiles
+    sh ./install.sh
     exit
   EOH
 end
