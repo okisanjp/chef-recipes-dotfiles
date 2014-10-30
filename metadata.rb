@@ -1,7 +1,7 @@
-name             'dotfiles'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+name             'chef-recipes-dotfiles'
+maintainer       'okisanjp'
+maintainer_email 'okisan.jp@gmail.com'
 license          'All rights reserved'
-description      'Installs/Configures dotfiles'
+description      'Installs/Configures chef-recipes-dotfiles'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
