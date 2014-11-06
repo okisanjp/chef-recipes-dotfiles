@@ -16,11 +16,11 @@ git "/home/#{node['current_user']}/dotfiles" do
 end
 
 execute "action" do
-  command "
-    su #{node['current_user']} -l -c '\
-    cd /home/#{node['current_user']}/dotfiles && \
-    chmod +x ./install.sh && \
-    ./install.sh && \
-    exit'
-  "
+  command <<-EOH
+    su - #{node['current_user']}
+    cd /home/#{node['current_user']}/dotfiles
+    chmod +x ./install.sh
+    /bin/bash ./install.sh
+    exit
+  EOH
 end
