@@ -11,6 +11,7 @@ git "/home/#{node['current_user']}/dotfiles" do
   repository "https://github.com/okisanjp/dotfiles.git"
   revision "master"
   user node['current_user']
+  group node['current_user']
   action :sync
 end
 
