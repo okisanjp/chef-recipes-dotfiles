@@ -19,7 +19,7 @@ execute "action" do
   command <<-EOH
     su - #{node['current_user']}
     cd /home/#{node['current_user']}/dotfiles
-    sudo chmod +x ./install.sh
+    chmod +x ./install.sh
     ./install.sh
     exit
   EOH
